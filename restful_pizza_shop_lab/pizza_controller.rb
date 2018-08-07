@@ -53,3 +53,6 @@ post '/pizza-orders/:id' do
   @order.update()
   erb(:show)
 end
+
+#could do PizzaOrder.find(params[:id])  then
+# order.first_name = params[:first_name] etc then order.update()

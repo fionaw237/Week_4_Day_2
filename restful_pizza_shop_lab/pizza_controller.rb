@@ -24,7 +24,6 @@ end
 get '/pizza-orders/:id' do
   @order = PizzaOrder.find(params[:id])
   erb(:show)
-
 end
 
 #Create
@@ -38,7 +37,8 @@ end
 post '/pizza-orders/:id/delete' do
   @order = PizzaOrder.find(params[:id])
   @order.delete()
-  erb(:delete)
+  redirect "/pizza-orders"
+  #erb(:delete)
 end
 
 # Edit
